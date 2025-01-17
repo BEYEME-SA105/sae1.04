@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{% block title %}Bienvenue!{% endblock %}</title>
+        <link rel="icon" href="https://bootswatch.com/#">
+        
+        <!-- Stylesheets -->
+        {% block stylesheets %}
+        <style>
+            @charset "UTF-8";
+            /*!
+            Bootswatch v5.3.3 (https://bootswatch.com)
+            Theme: quartz
+            */
+            :root, [data-bs-theme=light] {
+                --bs-blue: #3a8fd9;
+                --bs-indigo: #6610f2;
+                --bs-purple: #686dc3;
+                --bs-pink: #e83283;
+                --bs-red: #fc346f;
+                --bs-orange: #fd7e14;
+                --bs-yellow: #ffc107;
+                --bs-green: #41d7a7;
+                --bs-teal: #528fb3;
+                --bs-cyan: #39cbfb;
+                --bs-black: #000;
+                --bs-white: #fff;
+                --bs-primary: #e83283;
+                --bs-secondary: rgba(255, 255, 255, 0.4);
+                --bs-body-bg: #686dc3;
+                --bs-body-color: #fff;
+                /* Ajoutez les autres variables ici si nécessaire */
+            }
+            body {
+                margin: 0;
+                font-family: var(--bs-font-sans-serif);
+                font-size: var(--bs-body-font-size);
+                font-weight: var(--bs-body-font-weight);
+                line-height: var(--bs-body-line-height);
+                color: var(--bs-body-color);
+                background-color: var(--bs-body-bg);
+                -webkit-text-size-adjust: 100%;
+            }
+            /* Ajoutez d'autres styles ici si nécessaire */
+        </style>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+        {% endblock %}
+    </head>
+    <body>
+        <!-- Barre de navigation -->
+        <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="{{ path('app_jenathan') }}">Jenathan</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarColor01">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item">
+                            <a class="nav-link {% if app.request.attributes.get('_route') == 'app_jenathan' %}active{% endif %}" href="{{ path('app_jenathan') }}">
+                                Accueil
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link {% if app.request.attributes.get('_route') == 'app_portfolio' %}active{% endif %}" href="{{ path('app_portfolio') }}">
+                                Portfolio
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link {% if app.request.attributes.get('_route') == 'app_competences' %}active{% endif %}" href="{{ path('app_competences') }}">
+                                Compétences
+                            </a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Autres</a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">Action</a>
+                                <a class="dropdown-item" href="#">Another action</a>
+                                <a class="dropdown-item" href="#">Something else here</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">Lien séparé</a>
+                            </div>
+                        </li>
+                    </ul>
+                    <form class="d-flex">
+                        <input class="form-control me-sm-2" type="search" placeholder="Rechercher">
+                        <button class="btn btn-secondary my-2 my-sm-0" type="submit">Rechercher</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Contenu principal de la page -->
+        <div class="container mt-4">
+            {% block body %}{% endblock %}
+        </div>
+
+        <!-- Pied de page -->
+        <footer class="bg-light mt-5 py-3">
+            <div class="container">
+                <p class="text-center mb-0">© 2025 BEYEME EDOU Jenathan - Tous droits réservés</p>
+            </div>
+        </footer>
+
+        <!-- Scripts -->
+        {% block javascripts %}
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+        {% endblock %}
+    </body>
+</html>
+
+ 

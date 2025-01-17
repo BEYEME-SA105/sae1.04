@@ -1,0 +1,59 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Welcome to the Blog Page!{% endblock %}
+
+{% block body %}
+<style>
+    .example-wrapper {
+        margin: 2em auto;
+        max-width: 800px;
+        width: 90%;
+        font-family: 'Arial', sans-serif;
+        line-height: 1.6;
+        background-color: #f9f9f9;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        padding: 20px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    .example-wrapper h1 {
+        color: #2c3e50;
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+    .example-wrapper ul {
+        padding-left: 20px;
+        list-style-type: disc;
+    }
+    .example-wrapper li {
+        margin-bottom: 10px;
+        color: #34495e;
+    }
+    .example-wrapper code {
+        background: #eef;
+        padding: 3px 6px;
+        font-size: 90%;
+        border-radius: 4px;
+        color: #e74c3c;
+    }
+    .example-wrapper .footer {
+        margin-top: 20px;
+        font-size: 14px;
+        color: #7f8c8d;
+    }
+</style>
+
+<div class="example-wrapper">
+    <h1>Welcome, {{ controller_name }}! ✅</h1>
+
+    <p>Here is some information about your current setup:</p>
+    <ul>
+        <li>Controller file location: <code>src/Controller/BlogController.php</code></li>
+        <li>Template file location: <code>templates/blog/index.html.twig</code></li>
+    </ul>
+
+    <div class="footer">
+        <p>Made with ❤ using Symfony. Customize this page to make it your own!</p>
+    </div>
+</div>
+{% endblock %}
