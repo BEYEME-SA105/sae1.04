@@ -3,64 +3,126 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jenathan - Compétences</title>
+    <title>{% block title %}Jenathan - Compétences{% endblock %}</title>
+    {% block stylesheets %}
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
-    <link href="styles.css" rel="stylesheet">
+    <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+    {% endblock %}
+    <style>
+        .header {
+            background-color: #007bff;
+            color: white;
+            padding: 20px 0;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        .header h1 {
+            font-size: 3rem;
+        }
+        .skills-section h3 {
+            margin-top: 20px;
+        }
+        .skills-section p {
+            margin-bottom: 20px;
+        }
+        .skills-badge {
+            margin: 0.2rem;
+        }
+    </style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-        <div class="container">
-            <a class="navbar-brand" href="/">Jenathan</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ path('app_jenathan') }}">Accueil</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ path('app_portfolio') }}">Portfolio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="{{ path('app_competences') }}">Compétences</a>
-                     <li class="nav-item">   
-                        <a class="nav-link" href="contacter">Me contacter</a>
-                    </li>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+    {% include 'navbar.html.twig' %}
 
     <div class="container mt-5">
-        <h1 class="mb-4">Mes Compétences</h1>
+        <header class="header">
+            <div class="container">
+                <h1>Mes Compétences</h1>
+                <p class="lead">Découvrez mes compétences professionnelles et personnelles</p>
+            </div>
+        </header>
 
-        <div class="row">
+        <div class="row skills-section">
             <div class="col-md-6">
-                <h3>Compétence 1</h3>
-                <p>Description de la compétence 1.</p>
+                <h3>Développement Web</h3>
+                <p>Création de sites web dynamiques en utilisant HTML, CSS, JavaScript et frameworks comme Symfony et Bootstrap.</p>
+                <div>
+                    <span class="badge bg-primary skills-badge">HTML</span>
+                    <span class="badge bg-primary skills-badge">CSS</span>
+                    <span class="badge bg-primary skills-badge">JavaScript</span>
+                    <span class="badge bg-primary skills-badge">Symfony</span>
+                    <span class="badge bg-primary skills-badge">Bootstrap</span>
+                </div>
             </div>
             <div class="col-md-6">
-                <h3>Compétence 2</h3>
-                <p>Description de la compétence 2.</p>
+                <h3>Administration Systèmes</h3>
+                <p>Gestion et maintenance des systèmes d'exploitation, configuration de serveurs et administration réseau.</p>
+                <div>
+                    <span class="badge bg-secondary skills-badge">Linux</span>
+                    <span class="badge bg-secondary skills-badge">Windows</span>
+                    <span class="badge bg-secondary skills-badge">Serveurs</span>
+                    <span class="badge bg-secondary skills-badge">Réseaux</span>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <h3>Programmation</h3>
+                <p>Maîtrise de plusieurs langages de programmation dont Python, C, Java, et PHP.</p>
+                <div>
+                    <span class="badge bg-success skills-badge">Python</span>
+                    <span class="badge bg-success skills-badge">C</span>
+                    <span class="badge bg-success skills-badge">Java</span>
+                    <span class="badge bg-success skills-badge">PHP</span>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <h3>Physique</h3>
+                <p>Conception et gestion de bases de données relationnelles et non relationnelles, avec une expérience en SQL et MongoDB.</p>
+                <div>
+                    <span class="badge bg-warning skills-badge">Loi de la gravité</span>
+                    <span class="badge bg-warning skills-badge">Téorème de l'énergie cinétique</span>
+                    <span class="badge bg-warning skills-badge">Chimie</span>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <h3>Mathématiques</h3>
+                <p>Compétences solides en mathématiques appliquées, algèbre, calcul différentiel et intégral, et statistiques.</p>
+                <div>
+                    <span class="badge bg-danger skills-badge">Algèbre</span>
+                    <span class="badge bg-danger skills-badge">Calcul</span>
+                    <span class="badge bg-danger skills-badge">Statistiques</span>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <h3>Cuisine</h3>
+                <p>Passion pour la cuisine avec des compétences en préparation de plats variés et équilibrés.</p>
+                <div>
+                    <span class="badge bg-info skills-badge">Cuisine Française</span>
+                    <span class="badge bg-info skills-badge">Cuisine Africaine</span>
+                    <span class="badge bg-info skills-badge">Pâtisserie</span>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <h3>Travaux Manuels</h3>
+                <p>Compétences en bricolage, menuiserie, et autres travaux manuels créatifs.</p>
+                <div>
+                    <span class="badge bg-dark skills-badge">Bricolage</span>
+                    <span class="badge bg-dark skills-badge">Menuiserie</span>
+                    <span class="badge bg-dark skills-badge">DIY</span>
+                </div>
             </div>
         </div>
 
         <div class="row mt-5">
             <div class="col-12">
-                <h2>Formation et Certifications</h2>
-                <p>Ajoutez des détails sur votre parcours scolaire et professionnel ici.</p>
+                <h2>Autres</h2>
+                <p>Comme compétences en ajout je dirai, je suis un étudiant autonome, je vis seul, c'est-à dire je prépare je fais le ménage, je survis seul.</p>
             </div>
         </div>
     </div>
 
-    <footer class="bg-light mt-5 py-3">
-        <div class="container">
-            <p class="text-center mb-0">© 2025 BEYEME EDOU Jenathan - Tous droits réservés</p>
-        </div>
-    </footer>
+    {% include 'footer.html.twig' %}
 
+    {% block javascripts %}
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+    {% endblock %}
 </body>
 </html>

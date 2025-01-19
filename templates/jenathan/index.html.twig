@@ -6,8 +6,40 @@
     <title>Jenathan BEYEME EDOU - Accueil</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
     <link href="styles.css" rel="stylesheet">
+    <style>
+        /* Ajout de styles personnalisés */
+        body {
+            font-family: 'Arial', sans-serif;
+        }
+        .header {
+            background: linear-gradient(45deg, #007bff, #6610f2);
+            color: white;
+            padding: 20px 0;
+            margin-bottom: 30px;
+        }
+        .header h1 {
+            font-size: 3rem;
+        }
+        .profile-img {
+            max-width: 200px;
+        }
+        .list-unstyled li {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+        footer {
+            background-color: #f8f9fa;
+        }
+    </style>
 </head>
 <body>
+    <header class="header text-center">
+        <div class="container">
+            <h1>Jenathan BEYEME EDOU</h1>
+            <p class="lead">Étudiant en BUT Réseaux et Télécommunications</p>
+        </div>
+    </header>
+
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
         <div class="container">
             <a class="navbar-brand" href="/">Jenathan</a>
@@ -15,12 +47,15 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
+                <ul class="navbar-nav me-auto">
                     <li class="nav-item">
                         <a class="nav-link active" href="/">Accueil</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="portfolio">Mon portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="loisirs de Jenathan">Mes loisirs</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="competences">Mes compétences</a>
@@ -29,36 +64,32 @@
                         <a class="nav-link" href="contacter">Me contacter</a>
                     </li>
                 </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Rechercher">
+                    <button class="btn btn-secondary" type="submit">Rechercher</button>
+                </form>
             </div>
         </div>
     </nav>
 
     <div class="container mt-5">
         <div class="row">
-            <div class="col-md-4">
-                <img src="/jojo.jpg" alt="Jonathan" class="img-fluid rounded-circle mb-4">
+            <div class="col-md-4 text-center">
+                <img src="/jojo.jpg" alt="Jenathan" class="img-fluid rounded-circle profile-img mb-4">
             </div>
             <div class="col-md-8">
-                <h1 class="display-4">Jenathan</h1>
-                <p class="lead">Étudiant en BUT Réseaux et Télécommunications</p>
+                <h2 class="display-5">À propos de moi</h2>
+                <p>Je m'appelle BEYEME EDOU Jenathan, Je suis un étudiant passionné de 20 ans en première année de BUT Réseaux et Télécommunications. Curieux et déterminé, je suis fasciné par les technologies, notamment les réseaux et la cybersécurité. Mon objectif est clair : devenir un expert dans ce domaine et contribuer à créer des solutions innovantes et sécurisées.</p>
+                <p>Je rêve de transformer mes connaissances en impact réel, que ce soit en travaillant sur des projets ambitieux ou en intégrant une entreprise dynamique en alternance. Avec ma volonté d'apprendre et mon enthousiasme, je suis prêt à relever tous les défis pour construire un avenir meilleur grâce à la technologie.</p>
                 <hr class="my-4">
-                <div class="row">
-                    <div class="col-md-6">
-                        <h3>À propos de moi</h3>
-                        <p>Je m'appelle BEYEME EDOU Jenathan, Je suis un étudiant passionné de 20 ans en première année de BUT Réseaux et Télécommunications. Curieux et déterminé, je suis fasciné par les technologies, notamment les réseaux et la cybersécurité. Mon objectif est clair : devenir un expert dans ce domaine et contribuer à créer des solutions innovantes et sécurisées.</p>
-                        <p>Je rêve de transformer mes connaissances en impact réel, que ce soit en travaillant sur des projets ambitieux ou en intégrant une entreprise dynamique en alternance. Avec ma volonté d'apprendre et mon enthousiasme, je suis prêt à relever tous les défis pour construire un avenir meilleur grâce à la technologie.</p>
-                    </div>
-                    <div class="col-md-6">
-                        <h3>Loisirs</h3>
-                        <ul class="list-unstyled">
-                            <li>📱 Nouvelles technologies</li>
-                            <li>🎮 Gaming</li>
-                            <li>💻 Développement web</li>
-                            <li>🌐 Réseaux et systèmes</li>
-                            <li>🎹 Musique</li>
-                        </ul>
-                    </div>
-                </div>
+                <h3>Loisirs</h3>
+                <ul class="list-unstyled">
+                    <li>📱 Nouvelles technologies</li>
+                    <li>🎮 Gaming</li>
+                    <li>💻 Développement web</li>
+                    <li>🌐 Réseaux et systèmes</li>
+                    <li>🎹 Musique</li>
+                </ul>
             </div>
         </div>
 
@@ -82,7 +113,7 @@
 
     <footer class="bg-light mt-5 py-3">
         <div class="container">
-            <p class="text-center mb-0">© 2025 Jenathan - Tous droits réservés</p>
+            <p class="text-center mb-0">© 2025 BEYEME EDOU Jenathan - Tous droits réservés</p>
         </div>
     </footer>
 
